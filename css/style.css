@@ -320,22 +320,22 @@
 		position: relative;
 	}
 
-		.image:after {
-			-moz-transition: opacity 0.25s ease-in-out;
-			-webkit-transition: opacity 0.25s ease-in-out;
-			-o-transition: opacity 0.25s ease-in-out;
-			-ms-transition: opacity 0.25s ease-in-out;
-			transition: opacity 0.25s ease-in-out;
-			background-image: url("images/overlay.png");
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			opacity: 0.2;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
+		/*.image:after {*/
+			/*-moz-transition: opacity 0.25s ease-in-out;*/
+			/*-webkit-transition: opacity 0.25s ease-in-out;*/
+			/*-o-transition: opacity 0.25s ease-in-out;*/
+			/*-ms-transition: opacity 0.25s ease-in-out;*/
+			/*transition: opacity 0.25s ease-in-out;*/
+			/*background-image: url("images/overlay.png");*/
+			/*content: '';*/
+			/*display: block;*/
+			/*height: 100%;*/
+			/*left: 0;*/
+			/*opacity: 0.2;*/
+			/*position: absolute;*/
+			/*top: 0;*/
+			/*width: 100%;*/
+		/*}*/
 
 		.image img {
 			display: block;
