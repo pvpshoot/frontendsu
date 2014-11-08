@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>Документируй это</h2>
+		<p>Олег Наянов</p>
+		<img src="pictures/main-slide.png" height="800" width="1440" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:120px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>Зачем оно надо?</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Зачем оно надо?</h2>
+		<ol>
+			<li>Проекты бывают большими</li>
+			<li>Работает множество человек</li>
+		</ol>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>Как это бывает в жизни?</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Как это бывает в жизни?</h2>
+		<ol>
+			<li>Файл на 15000 строк</li>
+			<li>Не понятно как с этим работать</li>
+			<li>Может быть стоит документировать верстку?</li>
+		</ol>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>Чего этим можно добиться?</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Чего этим можно добиться?</h2>
+		<ol>
+			<li>База знаний</li>
+			<li>Быстрое вхождение в проект</li>
+			<li>Код не повторяется</li>
+		</ol>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>А на практике?</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>А на практике?</h2>
+		<ol>
+			<li>Никто не пишет документацию.</li>
+			<li>Это долго</li>
+			<li>Это скучно</li>
+		</ol>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>Что делать?</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Что делать?</h2>
+		<ol>
+			<li>Можно ли генерировать документацию автоматически?</li>
+		</ol>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>Можно</h2>
+	</div></section>
+	<section class="slide cover" ><div>
+		<h2></h2>
+		<img src="pictures/StyleDocco.png" height="640" width="1024" alt="">
+		<style>
+			#Picture h2 {
+				color:#FFF;
+				}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Как это работает?</h2>
+		<pre>
+			<code>/* Текст описания</code>
+			<code>&lt;button class="btn primary"&gt;Primary&lt;/button&gt;</code>
+			<code>*/</code>
+			<code>.btn.primary {</code>
+			<code>background: steelblue;</code>
+			<code>color: snow;</code>
+			<code>border: 2px outset steelblue;</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+	<section class="slide cover"><div>
+		<h2></h2>
+		<img src="pictures/StyleDocco2.png" height="640" width="1024" alt="">
+		<style>
+			#Picture h2 {
+				color:#FFF;
+				}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Для запуска</h2>
+		<ol>
+			<li>Node.js</li>
+			<li class="next">cd project</li>
+			<li class="next"><mark>npm install -fg styledocco</mark></li>
+			<li class="next"><mark>mkdir css</mark></li>
+			<li class="next"><mark>touch style.css</mark></li>
+			<li class="next"><mark>styledocco -n "My Project" css</mark></li>
+			<li class="next"><mark>PROFIT</mark></li>
+		</ol>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>Спасибо</h2>
+	</div></section>
+	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
