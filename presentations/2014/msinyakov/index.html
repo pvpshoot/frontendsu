@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>Препроцессор как новый супер герой</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
+  <style>
+    .sass {
+      color: #CC6699
+    }
+  </style>
+</head>
+
+<body class="full">
+  <header class="caption">
+    <h1>Препроцессор как новый супер герой</h1>
+    <ul>
+      <li>-Скорость Flash'a</li>
+      <li>-Сила Hulk'a</li>
+      <li>-Гибкость Mister Fantastic'a</li>
+    </ul>
+  </header>
+  <section class="slide cover" id="Cover">
+    <div>
+      <h2>Препроцессор как новый супер герой</h2>
+      <p>Собрал в кучу и поделился <a href="http://vkontakte.ru/pvpshoot">Михаил Синяков</a>
+      </p>
+      <img src="pictures/cover.jpg" alt="">
+      <img src="pictures/THE_FLASH.png" alt="" class='flash next'>
+      <img src="pictures/The_Incredible_Hulk_MARVEL_DC_Crossoververse.png" alt="" class='hulk next'>
+      <img src="pictures/Mr._Fantastic_Dialogue_1.png" alt="" class='Fantastic next'>
+
+      <!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+      <style>
+        #Cover h2 {
+          margin: 30px 0 0;
+          color: #FFF;
+          text-align: center;
+          font-size: 70px;
+        }
+        #Cover p {
+          margin: 10px 0 0;
+          text-align: center;
+          color: #FFF;
+          font-style: italic;
+          font-size: 20px;
+        }
+        #Cover p a {
+          color: #FFF;
+        }
+        #Cover .hulk {
+          bottom: 0;
+          right: -200px;
+          left: auto;
+        }
+        #Cover .flash {
+          bottom: 0;
+          right: auto;
+          left: -100px;
+        }
+        #Cover .Fantastic {
+          bottom: 0;
+          top: auto;
+          left: auto;
+          right: auto;
+          z-index: 1;
+          margin: 0 auto;
+        }
+      </style>
+
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Что мы имеем?</h2>
+      <table>
+        <tr>
+          <td>Sass</td>
+          <td>5%</td>
+        </tr>
+
+        <tr>
+          <td>Scss</td>
+          <td>13%</td>
+        </tr>
+
+        <tr>
+          <td>LESS</td>
+          <td>23%</td>
+        </tr>
+
+        <tr>
+          <td>Stylus</td>
+          <td>3%</td>
+        </tr>
+
+        <tr>
+          <td>I don't like any of them</td>
+          <td>7%</td>
+        </tr>
+
+        <tr>
+          <td>I don't have a preference</td>
+          <td>2%</td>
+        </tr>
+
+        <tr>
+          <td>I've never tried any of them</td>
+          <td>46%</td>
+        </tr>
+        <tr>
+          <td>Other</td>
+          <td>1%</td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Причина выбора SASS</h2>
+      <ul>
+        <li>Удобный синтаксис</li>
+        <li>Читаемый код</li>
+        <li>Высокая скорость разработки</li>
+        <li>Отличное комьюнити</li>
+      </ul>
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Переменные</h2>
+      <h3 class="sass">Sass</h3>
+      <pre>
+        <code>$mainColor: #0982c1</code>
+        <code>$siteWidth: 1024px</code>
+        <code>$borderStyle: dotted</code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Хэши (maps)</h2>
+      <h3 class="sass">Sass</h3>
+      <pre>
+        <code>$map: (key1: value1, key2: value2, key3: value3)</code>
+        <code>.btn</code>
+        <code>  background: map-get($map , key2)</code>
+      </pre>
+      <h3>CSS</h3>
+      <pre><code>.btn {background: value2;}</code></pre>
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Вложенность</h2>
+      <table>
+        <tr>
+          <th class="sass">Sass</th>
+          <th>CSS</th>
+        </tr>
+        <tr>
+          <td>
+            <pre>
+            <code>ul</code>
+            <code> background: green</code>
+            <code> li</code>
+            <code>  float: left</code>
+            <code>  a</code>
+            <code>   opacity: .5</code>
+            </pre>
+          </td>
+          <td>
+            <pre>
+              <code>ul {background: green;}</code>
+              <code>ul li {float: left;}</code>
+              <code>ul li a {opacity: 0.5;}</code>
+            </pre>
+
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Миксины</h2>
+      <table>
+        <tr>
+          <th class="sass">Sass</th>
+          <th>CSS</th>
+        </tr>
+        <tr>
+          <td>
+            <pre style="font-size: 80%;">
+            <code>@mixin sexy-border($color, $width)</code>
+            <code>  border:</code>
+            <code>    color: $color</code>
+            <code>    width: $width</code>
+            <code>    style: dashed</code>
+            <code>p</code>
+            <code>  @include sexy-border(blue, 1in)</code>
+            </pre>
+          </td>
+          <td>
+            <pre style="font-size: 80%;">
+              <code>p {</code>
+              <code>  border-color: blue;</code>
+              <code>  border-width: 1in;</code>
+              <code>  border-style: dashed;</code>
+              <code>}</code>
+            </pre>
+
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Наследование(@extend)</h2>
+      <table>
+        <tr>
+          <th class="sass" style="width:50%">Sass</th>
+          <th>CSS</th>
+        </tr>
+        <tr>
+          <td>
+            <pre>
+              <code>.module</code>
+              <code>  color: red</code>
+              <code>.anothe-module</code>
+              <code>  @extend .module</code>
+              <code>  boreder: 1px</code>
+            </pre>
+          </td>
+          <td>
+            <pre style="padding-left:10px;">
+              <code>.module, .anothe-rmodule {</code>
+              <code>  color: red;</code>
+              <code>}</code>
+              <code>.anothe-module {</code>
+              <code>  boreder: 1px;</code>
+              <code>}</code>
+
+            </pre>
+
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Тихие селекторы(%placeholder)</h2>
+      <table>
+        <tr>
+          <th class="sass" style="width:50%">Sass</th>
+          <th>CSS</th>
+        </tr>
+        <tr>
+          <td>
+            <pre>
+              <code>%module</code>
+              <code>  color: red</code>
+              <code>.anothe-module</code>
+              <code>  @extend %module</code>
+              <code>  boreder: 1px</code>
+            </pre>
+          </td>
+          <td>
+            <pre style="padding-left:10px;">
+              <code>.anothe-rmodule {</code>
+              <code>  color: red;</code>
+              <code>}</code>
+              <code>.anothe-module {</code>
+              <code>  boreder: 1px;</code>
+              <code>}</code>
+
+            </pre>
+
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Импорты(@import)</h2>
+      <table>
+        <tr>
+          <th class="sass" style="width:50%">Sass</th>
+
+        </tr>
+        <tr>
+          <td>
+            <pre>
+              <code>@import '_reset'</code>
+              <code>@import '_variables'</code>
+              <code>@import '_colors.json'</code>
+              <code>@import 'modules/_header'</code>
+              <code>@import 'modules/_body'</code>
+              <code>@import 'modules/_footer'</code>
+            </pre>
+          </td>
+
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  <section class="slide cover" id="">
+    <div>
+      <h2 style="color:white;">Математика:</h2>
+      <img src="pictures/picture.jpg" alt="" style='width: 100%;
+height: 100%;'>
+      <style>
+        #Picture h2 {
+          color: #FFF;
+        }
+      </style>
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Операторы(Operators)</h2>
+      <table>
+        <tr>
+          <th class="sass" style="width:50%">Sass</th>
+          <th>CSS</th>
+        </tr>
+        <tr style="font-size: 19px;">
+          <td>
+            <pre>
+             <code>.container</code>
+             <code>  width: 100%</code>
+             <code>article[role="main"]</code>
+             <code>  float: left</code>
+             <code>  width: 600px / 960px * 100%</code>
+             <code>aside[role="complimentary"]</code>
+             <code>  float: right</code>
+             <code>  width: 300px / 960px * 100%</code>
+            </pre>
+          </td>
+          <td>
+            <pre style="padding-left:10px;">
+              <code>.container {</code>
+              <code>  width: 100%;</code>
+              <code>}</code>
+              <code>article[role="main"] {</code>
+              <code>  float: left;</code>
+              <code>  width: 62.5%;</code>
+              <code>}</code>
+              <code>aside[role="complimentary"] {</code>
+              <code>  float: right;</code>
+              <code>  width: 31.25%;</code>
+              <code>}</code>
+
+            </pre>
+
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Работа с цветами(<img src="pictures/compass-logo.png" alt="" style="margin-bottom: -23px;">)</h2>
+      <table>
+        <tr>
+          <th class="sass" style="width:50%">Sass</th>
+          <th class="sass" style="width:50%"></th>
+        </tr>
+        <tr style="fonts-size: 20px;">
+          <td>
+
+            <ul>
+              <li>lighten($color,10%)</li>
+              <li>darken($color,10%)</li>
+              <li>complement($color)</li>
+              <li>saturate($color,80%)</li>
+              <li>desaturate($color,80%)</li>
+
+            </ul>
+
+          </td>
+          <td>
+            <ul>
+              <li>fade-out($color,.2)</li>
+              <li>fade-in($color,.3)</li>
+              <li>grayscale($color)</li>
+              <li>rgba($color,.2)</li>
+              <li>mix($color,$color1,70%)</li>
+              <li>etc...</li>
+            </ul>
+          </td>
+
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  <section class="slide fw20">
+    <div>
+      <h2>Циклы</h2>
+      <table>
+        <tr>
+          <th class="sass" style="width:50%">Sass</th>
+          <th>CSS</th>
+        </tr>
+        <tr style="fonts-size: 20px;">
+          <style>
+            .fw20 td * {
+              font-size: 16px;
+            }
+          </style>
+          <td>
+
+            <pre>
+                <code>$colors_list: red, blue, green</code>
+                <code>$n: 2</code>
+                <code>@for $i from 0 to $n</code>
+                <code>  div:nth-of-type(#{$i+1})</code>
+                <code>    background: nth($colors_list,
+$i % length($colors_list) + 1);</code>
+
+              </pre>
+
+          </td>
+          <td>
+            <pre>
+              <code>div:nth-of-type(1) {</code>
+              <code>  background: red;</code>
+              <code>}</code>
+              <code>div:nth-of-type(2) {</code>
+              <code>  background: blue;</code>
+              <code>}</code>
+            </pre>
+          </td>
+
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  <section class="slide cover" id="">
+    <div>
+      <h2>Оружие(инструменты):</h2>
+      <img src="pictures/timthumb.jpg" alt="" style='width: 100%;
+height: 100%;'>
+      <style>
+        #Picture h2 {
+          color: #FFF;
+        }
+      </style>
+    </div>
+  </section>
+  <section class="slide cover" id="">
+    <div>
+      <img src="pictures/leather_texture386.jpg" alt="" style='width: 100%;
+height: 100%;'>
+      <style>
+        #Picture h2 {
+          color: #FFF;
+        }
+      </style>
+    </div>
+  </section>
+  <section class="slide cover" id="">
+    <div>
+      <img src="pictures/superman_1.jpg" alt="" style='width: 100%;
+height: 100%;'>
+      <style>
+        #Picture h2 {
+          color: #FFF;
+        }
+      </style>
+    </div>
+  </section>
+
+  <!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+  <div class="progress">
+    <div></div>
+  </div>
+  <script src="../shower/shower.min.js"></script>
+  <!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+
+</html>
