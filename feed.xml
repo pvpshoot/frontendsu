@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>front-end.su</title>
+    <description>front-end разработка в деталях</description>
+    <link>http://front-end.su/</link>
+    <atom:link href="http://front-end.su/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>История user-agent</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;Первые браузеры&lt;/h2&gt;
+
+&lt;p&gt;Самый первый веб-браузер, Mosaic, был разработан в 1993 году в Национальном Центре Суперкомпьютерных приложений (National Center for Supercomputing Applications (NCSA)).&lt;/p&gt;
+
+&lt;p&gt;Его строка user-agent была довольно простой и выглядела примерно следующим образом&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mosaic/0.9&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Строка могла варьироваться в зависимости от операционной системы и платформы, однако, ее внешний вид оставался достаточно простым. Текст перед косой, чертой указывал на название продукта, а текст после черты — номер версии продукта.&lt;/p&gt;
+
+&lt;p&gt;Когда Netscape Communications начала разработку своего браузера, то дала ему кодовое имя Mozilla (сокращение от «Mosaic Killer»). Первая публичная версия называлась Netscape Navigator и использовала строку user-agent в следующем формате.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/Version [Language] (Platform; Encryption)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Как мы видим, Netscape продолжал традицию использования имени продукта и версии, однако после нее он добавлял следующую информацию:&lt;/p&gt;
+
+&lt;p&gt;Язык — код языка, указывающий, где предназначено использование приложения
+Платформа — операционная система и/или платформы на которой приложение выполняется
+Шифрование — используемый тип шифрования. Возможные значения: U (128-битное шифрование), I (40-битное шифрование), и N (не используется).&lt;/p&gt;
+
+&lt;p&gt;Строка user-agent в Netscape Navigator выглядела так:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/2.02 [fr] (WinNT; I)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Эта строка сообщает о том что используется Netscape Navigator версии 2.02, сборка предназначена для использования в франкоязычных странах и запущена на операционной системе WindowsNT c 40-битным шифрованием. В данном случае достаточно легко определить какой браузер используется, нужно просто взглянуть на название продукта в строке user-agent.&lt;/p&gt;
+
+&lt;h2 id=&quot;netscape-navigator-3--internet-explorer-3&quot;&gt;Netscape Navigator 3 и Internet Explorer 3&lt;/h2&gt;
+
+&lt;p&gt;В 1996 году был выпущен Netscape Navigator 3, он превзошел Mosaic и стал самым популярным веб-браузером. В строке user-agent произошло лишь небольшое изменение: был убран языковой маркер и добавлена дополнительная информация об операционной системе или процессоре, используемом системой.&lt;/p&gt;
+
+&lt;p&gt;Формат стал следующим:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/Version (Platform; Encryption [; OS-or-CPU description])&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Строка user-agent для браузера Netscape  Navigator 3, запущенного под Windows выглядела следующим образом:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/3.0 (Win95; U)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Эта строка указывает что Netscape Navigator 3 работает под управлением Windows 95 с 128-битным шифрованием. Обратите внимание на то, что описание OS-or-CPU отсутствует в случае, когда браузер запущен на системе Windows.&lt;/p&gt;
+
+&lt;p&gt;Вскоре после выхода Netscape Navigator 3 компания Microsoft выпустила свой первый публично доступный веб-браузер — Internet Explorer 3. Netscape Navigator был доминирующим браузером в те времена, многие сервера специально делали проверку на соответствие перед тем, как отдать страницу. Эта ситуация не позволила был молодому браузеру нормально развиваться. Было принято решение создать строку user-agent, которая была бы совместима с user-agent, используемой в Netscape.&lt;/p&gt;
+
+&lt;p&gt;Результат стал следующим:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/2.0 (compatible; MSIE Version; Operating System)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Например, Internet Explorer 3.02 работавший на Windows 95 выдавал следующую строку user-agent&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/2.0 (compatible; MSIE 3.02; Windows 95)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Поскольку большинство снифферов браузеров в то время смотрели только на первую часть строки, IE успешно определялся как Mozilla, так же как и Netscape Navigator. Этот шаг вызвал неоднозначную реакцию, поскольку нарушал Конвенцию Идентификации Браузера. Истинное же название браузера было в середине строки.&lt;/p&gt;
+
+&lt;h2 id=&quot;netscape-communicator-4--internet-explorer-4-8&quot;&gt;Netscape Communicator 4 и Internet Explorer 4-8&lt;/h2&gt;
+
+&lt;p&gt;В августе 1997 года был выпущен Netscape Communicator 4 (в этом релизе название было изменено с Navigator на Communicator). Начиная с версии 4 на компьютере с Windows 98 строка user-agent выглядела так:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/4.0 (Win98; I)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Netscape выпускала патчи и исправления для своего браузера. Соответственно, увеличивалась и версия. Как показано ниже строка user-agent выглядела имела следующий формат:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/4.79 (Win98; I)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Когда Microsoft выпустила Internet Explorer 4, строка user-agent приняла следующий формат:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/4.0 (compatible; MSIE Version; Operating System)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Например IE4, запущенный под Win98 возвращал следующую строку:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/4.0 (compatible; MSIE 4.0; Windows 98)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;С этим изменением версия Mozilla и текущая версия IE были синхронизированы, что позволяло легко идентифицировать эти браузеры четвертого поколения. К сожалению, позже синхронизация была прекращена. В версии Internet Explorer 4.5 (она была выпущена только для Маков) версия Mozilla осталась обозначенной номером 4, а версия IE изменилась следующим образом:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/4.0 (compatible; MSIE 4.5; Mac_PowerPC)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Эта картина сохранялась вплоть до 7-й версии IE.&lt;/p&gt;
+
+&lt;p&gt;Internet Explorer 8 несколько изменил строку user-agent, добавив в нее версию движка рендеринга Trident:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Добавление движка было важным, потому что версия MSIE изменялась на 7.0, в случае если IE8 работал в режиме совместимости, версия Trident оставалась такой же. Так как строка IE7 не включала в себя версию Trident, вы легко можете отличить IE7 от IE8 работающего в режиме совместимости.&lt;/p&gt;
+
+&lt;h2 id=&quot;gecko&quot;&gt;Gecko&lt;/h2&gt;
+
+&lt;p&gt;Движок рендеринга Gecko это сердце браузера Firefox. Когда Gecko был впервые разработан, он входил в состав браузера Mozilla, который должен был носить имя Netscape 6. Его спецификация была написана под Netscape 6 и в ней указывалось как строка user-agent должна была выглядеть в следующих версиях. В новой версии формат строки разительно отличался от сравнительно простой строки user-agent, использовавшейся до версии 4.4.&lt;/p&gt;
+
+&lt;p&gt;Формат был следующим:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/MozillaVersion (Platform; Encryption; OS-or-CPU; Language; PrereleaseVersion)Gecko/GeckoVersion ApplicationProduct/ApplicationProductVersion&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Эта удивительно сложная строка включат в себя многое. Чтобы лучше понять формат строки, предлагаем вам рассмотреть строки user-agent взятые из различных браузеров на основе Gecko.&lt;/p&gt;
+
+&lt;p&gt;Netscape 6.21 на Windows XP:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:0.9.4) Gecko/20011128 Netscape6/6.2.1&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;SeaMonkey 1.1a на Linux:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1b2) Gecko/20060823 SeaMonkey/1.1a&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Firefox 2.0.0.11 на Windows XP:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Camino 1.5.1 на Mac OS X:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.6) Gecko/20070809 Camino/1.5.1&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Все эти строки говорят о том, что браузер построен на основе Gecko (хоть они и отличаются версиями). Зачастую название самого браузера не настолько важно, как понимание того, что он построен на основе Gecko.&lt;/p&gt;
+
+&lt;p&gt;Mozilla не изменялась с версии 5.0, с того момента, как был выпущен первый браузер на основе Gecko и изменения, скорее всего, произойдут еще не скоро.&lt;/p&gt;
+
+&lt;h2 id=&quot;webkit&quot;&gt;WebKit&lt;/h2&gt;
+
+&lt;p&gt;В 2003 году компания Apple анонсировала свой собственный веб-браузер под названием Safari. Движок рендеринга WebKit, используемый в Safari, был начат как форк движка KHTML, используемого в Linux браузере Konqueror. Пару лет спустя, WebKit стал самостоятельным проектом с открытым исходным кодом, основной целью которого стало развитие движка.&lt;/p&gt;
+
+&lt;p&gt;Разработчики нового браузера и движка столкнулись с проблемой, аналогичной проблеме разработчиков Internet Explorer 3.0: как убедиться в том, что браузер не будет заблокирован популярными сайтами? Ответ был прост, необходимо было поместить в user-agent информацию о том, что браузер совместим с другим популярным браузером. Это привело к появлению строки в следующем формате:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (Platform; Encryption; OS-or-CPU; Language) AppleWebKit/AppleWebKitVersion (KHTML, like Gecko) Safari/SafariVersion&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Пример&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/124 (KHTML, like Gecko) Safari/125.1&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Как вы видите, в строке указана не только версия Apple WebKit, но и версия Safari. Все браузеры на основе WebKit  идентифицируют себя как Mozilla 5.0, так же как и все Gecko браузеры.&lt;/p&gt;
+
+&lt;p&gt;Версия Safari это обычно номер сборки, который не обязательно соответствует номеру релиза.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/522.15.5 (KHTML, like Gecko) Version/3.0.3 Safari/522.15.5&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Наиболее интересной и спорной частью строки является  “(KHTML, like Gecko)”  в версии Safari pre-1.0. Apple встретила большое сопротивление со стороны разработчиков, которые увидели в этом попытку обмануть клиенты и сервера выдавая Safari за Gecko (как будто Mozilla/5.0 было недостаточно). Ответ Apple был похож на слова Microsoft, когда IE попал под удар: Safari совместим с Mozilla и веб-сайты не должны блокировать пользователей Safari только потому, что они используют неподдерживаемый браузер.&lt;/p&gt;
+
+&lt;p&gt;Стоит обратить внимание, что данная особенность имеется только в Safari, но не в WebKit, так что другие браузеры на данном движке могут представляться иначе.&lt;/p&gt;
+
+&lt;h2 id=&quot;konqueror&quot;&gt;Konqueror&lt;/h2&gt;
+
+&lt;p&gt;Konqueror — браузер, поставляемый в комплекте с Linux оболочкой KDE, основан на движке KHTML. Хотя браузер доступен только на Linux платформе, он имеет достаточно большое число активных пользователей.&lt;/p&gt;
+
+&lt;p&gt;Для наибольшей совместимости konqueror использует строку, основанную на формате IE, следующего формата:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (compatible; Konqueror/Version; OS-or-CPU)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Тем не менее Konqueror 3.2 внес в user-agent изменения аналогичные WebKit, обозначающие его как KHTML:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (compatible; Konqueror/Version; OS-or-CPU) KHTML/KHTMLVersion (like Gecko)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Пример&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (compatible; Konqueror/3.5; SunOS) KHTML/3.5.0 (like Gecko)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Номера версий Konqueror и KHTML, как правило, совпадают. Разница может быть подобной:&lt;/p&gt;
+
+&lt;p&gt;Konqueror 3.5 с движком KHTML 3.5.1&lt;/p&gt;
+
+&lt;h2 id=&quot;chrome&quot;&gt;Chrome&lt;/h2&gt;
+
+&lt;p&gt;Google Chrome использует WebKit в качестве движка рендеринга страниц, но использует различные JavaScript движки. Первый бета-релиз Chrome версии 0.2 содержит всю информацию от WebKit, а так же содержит дополнительный раздел Chrome версии.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (Platform; Encryption; OS-or-CPU; Language) AppleWebKit/AppleWebKitVersion (KHTML, like Gecko) Chrome/ChromeVersion Safari/SafariVersion&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;пример строки user-agent для версии Chrome 0.2&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.29 Safari/525.13&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Есть вероятность что версии WebKit и Safari всегда будут одинаковыми.&lt;/p&gt;
+
+&lt;h2 id=&quot;opera&quot;&gt;Opera&lt;/h2&gt;
+
+&lt;p&gt;Один из самых противоречивых браузеров. Однако, строка user-agent, из всех современных браузеров, выглядит здесь самой логичной. До 8-й версии формат строки был следующим:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Opera/Version (OS-or-CPU; Encryption) [Language]&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Если вы использовали Opera 7.54 на Windows XP, то user-agent был следующим:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Opera/7.54 (Windows NT 5.1; U) [en]&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;С выходом 8-й версии информация о языковом регионе была перенесена внутрь круглых скобок, для большего соответствия другим браузерам:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Opera/Version (OS-or-CPU; Encryption; Language)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Opera 8 на Windows XP выдавала следующую строку&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Opera/8.0 (Windows NT 5.1; U; en)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;По умолчанию, Opera возвращает user-agent в этом формате. В настоящее время он является единственным из четырех основных браузеров использующих название продукта и версию для полной идентификации. Однако, как и другие браузеры Opera столкнулась с проблемой user-agent. Хоть технически это и правильно, но в интернете достаточно много снифферов браузеров, которые ориентируются прежде всего на имя продукта Mozilla. Существует так же изрядное количество кода, написанного специально для IE или Gecko. Вместо того, чтобы запутывать снифферы путем изменения своей строки user-agent Opera полностью идентифицирует себя как другой браузер. &lt;/p&gt;
+
+&lt;p&gt;В Opera 9 есть два способа изменения User-Agent. Один из способов заключается в представлении браузера как Firefox или IE. При использовании этой опции user-agent начинает выглядеть в соответствии со строкой Firefox или IE с добавлением примечания Opera и номера версии в конце&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.50&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 9.50&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;В первом случае браузер представляется как Firefox2, во втором как Internet Explorer 6.&lt;/p&gt;
+
+&lt;p&gt;Другой вариант — маскировка браузера как Firefox или IE. Но в этом случае в строке user-agent не появляется ни о браузере Opera, ни о его версии. В данном случае нет никакой возможности определить при помощи user-agent, что используется именно Opera.  Еще больше положение усложняет тенденция Opera к изменению user-agent без уведомления пользователя.&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;Вывод&lt;/h2&gt;
+
+&lt;p&gt;История user-agent рассказывает о том, что браузеры пытаются убедить снифферы определить их теми браузерами, которыми они не являются. Internet Explorer хочет быть идентифицирован как Netscape 4, WebKit и Konqueror представляются как Firefox, Chrome маскируется под Safari. Все это делает определение браузера через user-agent проблематичным (кроме случая с Opera), хотя каждый браузер предоставляет вам возможность отличить его от остальных. Главное запомните, что если браузеры и пытаются обмануть, делают они это для того, чтобы доказать свою совместимость с другими браузерами.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;Данный материал является переводом статьи: &lt;br /&gt;Nicholas C. Zakas &lt;a href=&quot;http://www.nczonline.net/blog/2010/01/12/history-of-the-user-agent-string/&quot;&gt;History of the user-agent string&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 Jul 2015 00:00:00 +0000</pubDate>
+        <link>http://front-end.su/user-agent-history</link>
+        <guid isPermaLink="true">http://front-end.su/user-agent-history</guid>
+      </item>
+    
+      <item>
+        <title>Front-end.su на Ulcamp--15</title>
+        <description>&lt;p&gt;Доброго времени суток дорогие друзья.&lt;/p&gt;
+
+&lt;p&gt;Скоро нас ожидает самое пляжное IT событие: ULCAMP 2015. Не будем лукавить, многие едут туда отдохнуть, бухнуть и в режиме патихард провести выходные. Front-end.su предлагает нам вновь собрать лучшие умы и поделиться опытом и хитростями.&lt;/p&gt;
+
+&lt;p&gt;В субботу нас ждут череда баркемпов, и мы застолбим один для общения в формате ‘без проектора’. В программе: новые технологии, забытые костыли и конечно холивары, ведь в споре рождается истина. В основной программе обсуждения по темам: Методологии верстки, WebAsm, Google Material Framework, Броузеры- настоящее и будущее.&lt;/p&gt;
+
+&lt;p&gt;Дружественная обстановка в лесу на поляне, свежий воздух, Волга и разговоры о любимом деле. Не упускай возможность пообщаться в живую с коллегами по цеху.&lt;/p&gt;
+
+&lt;p&gt;Организаторы и затейники Front-end.su в лице shoot и nayanov.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 Jul 2015 00:00:00 +0000</pubDate>
+        <link>http://front-end.su/ulcamp-2015</link>
+        <guid isPermaLink="true">http://front-end.su/ulcamp-2015</guid>
+      </item>
+    
+      <item>
+        <title>Привет, мир!</title>
+        <description>&lt;p&gt;Как я и обещал, сайт front-end.su превратится из лендинга о прошедшей конференции в блог, посвященный веб-разработке. Но это вовсе не значит, что сама конференция перестанет существовать. Думаю, многим бы хотелось, чтобы она прошла в этом году. О том, будет ли FrontHub 2015, мы узнаем достачно скоро. А сейчас еще несколько строк о том, какие материалы будут появляться в данном блоге.&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;Авторы&lt;/h2&gt;
+
+&lt;p&gt;Основными поставщиками контента пока будут два человека. Это Михаил Синяков и Олег Наянов. &lt;/p&gt;
+
+&lt;p&gt;Однако, мы не против, если кто-то в будущем изъявит желание написать статью или обзор и поделиться информацией с читателями. Для того, чтобы разместить материал, вам нужно &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#102;&amp;#114;&amp;#111;&amp;#110;&amp;#116;&amp;#101;&amp;#110;&amp;#100;&amp;#115;&amp;#117;&amp;#064;&amp;#103;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&quot;&gt;написать нам письмо.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;Тематика&lt;/h2&gt;
+
+&lt;p&gt;Все, что непосредственно касается веб-разработки. Это верстка, браузеры, средства разработки и многое другое. В последствии нам бы хотелось, чтобы ресурс вырос во что-то более крупное, чем просто блог со статьями, но случится это или нет покажет время.&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;Периодичность&lt;/h2&gt;
+
+&lt;p&gt;Раз уж мы это затеяли, по постараемся соблюдать регулярность публикации материалов. Но стоит сразу оговориться, что проект запущен на добровольных началах, он никем не финансируется и на него тратится личное время авторов. &lt;/p&gt;
+
+&lt;p&gt;Пожалуй, этих трех пунктов будет достаточно для вводного материала. Надеемся, вам понравится.&lt;/p&gt;
+
+&lt;p&gt;Михаил и Олег. Front-end.su&lt;/p&gt;
+</description>
+        <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+        <link>http://front-end.su/hello-world</link>
+        <guid isPermaLink="true">http://front-end.su/hello-world</guid>
+      </item>
+    
+  </channel>
+</rss>
