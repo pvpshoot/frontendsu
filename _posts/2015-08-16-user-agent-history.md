@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      История user-agent
-date:       2015-07-08
+date:       2015-07-28
 summary:    Если вам всегда было интересно почему user-agent в Chrome пишет, что он Mozilla, то добро пожаловать под кат.
 categories: jekyll pixyll
 permalink: /user-agent-history
