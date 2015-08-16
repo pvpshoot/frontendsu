@@ -192,7 +192,7 @@
 
 &lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;Opera/8.0 (Windows NT 5.1; U; en)&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;По умолчанию, Opera возвращает user-agent в этом формате. В настоящее время он является единственным из четырех основных браузеров использующих название продукта и версию для полной идентификации. Однако, как и другие браузеры Opera столкнулась с проблемой user-agent. Хоть технически это и правильно, но в интернете достаточно много снифферов браузеров, которые ориентируются прежде всего на имя продукта Mozilla. Существует так же изрядное количество кода, написанного специально для IE или Gecko. Вместо того, чтобы запутывать снифферы путем изменения своей строки user-agent Opera полностью идентифицирует себя как другой браузер. &lt;/p&gt;
+&lt;p&gt;По умолчанию, Opera возвращает user-agent в этом формате. В настоящее время он является единственным из четырех основных браузеров использующих название продукта и версию для полной идентификации. Однако, как и другие браузеры Opera столкнулась с проблемой user-agent. Хоть технически это и правильно, но в интернете достаточно много снифферов браузеров, которые ориентируются прежде всего на имя продукта Mozilla. Существует так же изрядное количество кода, написанного специально для IE или Gecko. Вместо того, чтобы запутывать снифферы путем изменения своей строки user-agent Opera полностью идентифицирует себя как другой браузер.&lt;/p&gt;
 
 &lt;p&gt;В Opera 9 есть два способа изменения User-Agent. Один из способов заключается в представлении браузера как Firefox или IE. При использовании этой опции user-agent начинает выглядеть в соответствии со строкой Firefox или IE с добавлением примечания Opera и номера версии в конце&lt;/p&gt;
 
@@ -210,7 +210,7 @@
 
 &lt;p&gt;&lt;i&gt;Данный материал является переводом статьи: &lt;br /&gt;Nicholas C. Zakas &lt;a href=&quot;http://www.nczonline.net/blog/2010/01/12/history-of-the-user-agent-string/&quot;&gt;History of the user-agent string&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 08 Jul 2015 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 08 Jul 2015 00:00:00 +0300</pubDate>
         <link>http://front-end.su/user-agent-history</link>
         <guid isPermaLink="true">http://front-end.su/user-agent-history</guid>
       </item>
@@ -227,7 +227,7 @@
 
 &lt;p&gt;Организаторы и затейники Front-end.su в лице shoot и nayanov.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 08 Jul 2015 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 08 Jul 2015 00:00:00 +0300</pubDate>
         <link>http://front-end.su/ulcamp-2015</link>
         <guid isPermaLink="true">http://front-end.su/ulcamp-2015</guid>
       </item>
@@ -254,7 +254,7 @@
 
 &lt;p&gt;Михаил и Олег. Front-end.su&lt;/p&gt;
 </description>
-        <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 18 Jun 2015 00:00:00 +0300</pubDate>
         <link>http://front-end.su/hello-world</link>
         <guid isPermaLink="true">http://front-end.su/hello-world</guid>
       </item>
